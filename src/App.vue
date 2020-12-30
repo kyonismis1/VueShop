@@ -1,20 +1,28 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
     <router-view />
   </div>
 </template>
 
+<script>
+export default {
+  name: "app"
+};
+</script>
+
 <style lang="scss">
+@import "./assets/all.scss";
+@import url(https://fonts.googleapis.com/earlyaccess/cwtexyen.css);
+//中文原體字形
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: cwTeXYen, Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+  font-size: 20px;
+  line-height: 2;
+  font-weight: 800;
 }
 
 #nav {
