@@ -2,7 +2,7 @@
   <div>
     <BackendNavbar />
     <div class="container">
-      <router-view/>
+      <router-view />
     </div>
     <Footer />
   </div>
@@ -13,11 +13,11 @@ import BackendNavbar from "@/components/BackendNavbar.vue";
 import Footer from "@/components/Footer.vue";
 
 export default {
-  components:{
-      BackendNavbar,
-      Footer
-  }
-}
+  components: {
+    BackendNavbar,
+    Footer,
+  },
+};
 </script>
 
 

@@ -178,6 +178,9 @@ export default {
       this.$http.post(api, vm.user).then(response => {
         console.log(response.data);
         if (response.data.success) {
+          const token = response.data.token;
+          const expired = response.data.expired;
+          document.cookie = `token=${token}; expires=${new Date(expired)};`;
           $("#login").modal("hide");
           vm.$router.push("/admin");
         } else {
