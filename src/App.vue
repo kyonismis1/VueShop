@@ -18,11 +18,12 @@ export default {
   font-family: cwTeXYen, Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+  color: #CC9966;
   font-size: 20px;
   line-height: 2;
+  letter-spacing: 0.3rem;
   font-weight: 800;
+  background: rgb(44, 44, 44);
 }
 
 #nav {

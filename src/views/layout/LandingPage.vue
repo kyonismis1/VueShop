@@ -1,5 +1,14 @@
 <template>
-  <div>Landing</div>
+  <div>
+    Landing
+    <button
+      type="button"
+      class="btn btn-primary"
+      @click="$router.push('/home')"
+    >
+      進去啦
+    </button>
+  </div>
 </template>
 
 <script>

@@ -179,7 +179,7 @@ export default {
         console.log(response.data);
         if (response.data.success) {
           $("#login").modal("hide");
-          vm.$router.push("Home");
+          vm.$router.push("/admin");
         } else {
           alert("登入失敗");
         }
