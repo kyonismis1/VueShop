@@ -46,43 +46,46 @@ export default {
   methods: {
     getProducts() {
       const vm = this;
-      const api = `https://vue-course-api.hexschool.io/api/hanvueshop/products/all`;
+      console.log("1")
+      const api = "https://vue-course-api.hexschool.io/api/hanvueshop/products/all";
+      console.log("2")
       vm.isLoading = true;
       this.$http.get(api).then(response => {
+        console.log("3")
         switch (vm.para) {
           case "Shirt":
             vm.products = response.data.products.filter(
-              item => item.category === this.para
+              item => item.category === vm.para
             );
             break;
           case "Shortsleeve":
             vm.products = response.data.products.filter(
-              item => item.subCategory === this.para
+              item => item.subCategory === vm.para
             );
             break;
           case "Longsleeve":
             vm.products = response.data.products.filter(
-              item => item.subCategory === this.para
+              item => item.subCategory === vm.para
             );
             break;
           case "Pants":
             vm.products = response.data.products.filter(
-              item => item.category === this.para
+              item => item.category === vm.para
             );
             break;
           case "Jeans":
             vm.products = response.data.products.filter(
-              item => item.subCategory === this.para
+              item => item.subCategory === vm.para
             );
             break;
           case "Trousers":
             vm.products = response.data.products.filter(
-              item => item.subCategory === this.para
+              item => item.subCategory === vm.para
             );
             break;
           case "Coat":
             vm.products = response.data.products.filter(
-              item => item.category === this.para
+              item => item.category === vm.para
             );
             break;
           case "Overcoat":
@@ -128,7 +131,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import url("https://fonts.googleapis.com/css?family=Calibri:400,300,700");
 
 body {
   vertical-align: middle;

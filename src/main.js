@@ -41,6 +41,7 @@ configure({
   }
 });
 
+
 new Vue({
   router,
   store,
@@ -49,3 +50,20 @@ new Vue({
   App,
   render: h => h(App)
 }).$mount("#app");
+
+router.beforeEach((to, from, next) => {
+  console.log("to:", to, "from:", from, "next:", next);
+  if (to.meta.requiresAuth) {
+    const api = "https://vue-course-api.hexschool.io/api/user/check/";
+    axios.post(api).then(response => {
+      console.log(response);
+      if (response.data.success) {
+        next();
+      } else {
+        next("/");
+      }
+    });
+  } else {
+    next();
+  }
+});

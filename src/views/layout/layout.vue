@@ -34,10 +34,6 @@ export default {
     Login,
     Footer
   },
-    created() {
-    const myCookie = document.cookie.replace(/(?:(?:^|.*;\s*)token\s*=\s*([^;]*).*$)|^.*$/, '$1');
-    this.$http.defaults.headers.common.Authorization = myCookie;
-  },
 };
 </script>
 
